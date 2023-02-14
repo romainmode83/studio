@@ -3,12 +3,13 @@ import {deskTool} from 'sanity/desk'
 import {visionTool} from '@sanity/vision'
 import {schemaTypes} from './schemas'
 
+
 export default defineConfig({
   name: 'default',
   title: 'sanity-tutorial-blog',
 
-  projectId: '235bq1i5',
-  dataset: 'production',
+  projectId: import.meta.env.SANITY_STUDIO_PROJECT_ID,
+  dataset: import.meta.env.SANITY_STUDIO_DATASET,
 
   plugins: [deskTool(), visionTool()],
 
